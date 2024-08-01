@@ -1,11 +1,11 @@
 pipeline {
     agent any
     stages {
-        stage ('Clone') {
+        stage('Checkout') {
             steps {
-                git 'https://github.com/khongbach13/testpipe.git'
+                git branch: 'main', 
+                    url: 'https://github.com/raghav-bhardwaj/python'
             }
-	}
+        }
     }
 }
-
