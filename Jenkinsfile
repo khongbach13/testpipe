@@ -11,11 +11,11 @@ pipeline {
     }
     post{
         success{
-            sh 'curl -iX GET "https://api.telegram.org/bot7138980867:AAFSCc-O_l1owbq6mdQBb0J6W18dMvYS0l0/sendMessage?chat_id=-4215079471&parse_mode=HTML&text=<b>Project</b> : jenkinsnew <b>Branch</b>: master <b>Build </b> : SUCCESS"'
+            sh 'curl -s -X POST "https://api.telegram.org/bot7138980867:AAFSCc-O_l1owbq6mdQBb0J6W18dMvYS0l0/sendMessage" -d "chat_id=-4215079471&text=Hello20from%20Bot!"'
         }
     
         failure{
-            sh 'curl -iX GET "https://api.telegram.org/bot7138980867:AAFSCc-O_l1owbq6mdQBb0J6W18dMvYS0l0/sendMessage?chat_id=-4215079471&parse_mode=HTML&text=<b>Project</b> : jenkinsnew <b>Branch</b>: master <b>Build </b> : FAILURE"'
+            sh 'curl -s -X POST "https://api.telegram.org/bot7138980867:AAFSCc-O_l1owbq6mdQBb0J6W18dMvYS0l0/sendMessage" -d "chat_id=-4215079471&text=Hello20from%20Bot!"'
         }
         
     }
