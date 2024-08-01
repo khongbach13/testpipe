@@ -4,7 +4,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 git branch: 'main', 
-                    url: 'https://github.com/raghav-bhardwaj/python'
+                    url: 'git@github.com:khongbach13/testpipe.git'
             }
         }
     }
